@@ -7,12 +7,12 @@ const AdditionalFeatures = props => {
       <h4>Additional Features</h4>
       {props.additionalFeatures.length ? (
         <ol type="1">
-          {props.additionalFeatures.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+          {props.store.map(item => (
+            <AdditionalFeature key={item.id} feature={item} purchaseUpgrade={props.purchaseUpgrade}/>
           ))}
         </ol>
       ) : (
-        <p>Nice looking car!</p>
+        <p>All available upgrades have been added!</p>
       )}
     </div>
   );
